@@ -4,4 +4,3 @@ HEAD
 Добавлено в feature-branch
 Я ебал этот мир
 
-parent of d39bb98 (Обновление README в feature-branch)
