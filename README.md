@@ -5,3 +5,4 @@ HEAD
 Добавил строку для теста Git workflow
 Я ебал этот мир
 Добавлено из feature/learning-git ветки
+Практика Git - commit №1
