@@ -6,3 +6,4 @@ HEAD
 Я ебал этот мир
 Добавлено из feature/learning-git ветки
 Практика Git - commit №1
+Тренерую Git
