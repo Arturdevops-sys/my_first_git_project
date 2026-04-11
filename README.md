@@ -4,4 +4,6 @@ HEAD
 Добавлено в feature-branch
 Добавил строку для теста Git workflow
 Я ебал этот мир
-Добавлено из feature/learning-git ветки
+Добавлено из feature/learning-git веткизцвlsls
+Практика Git - commit №1
+Тренерую Git
