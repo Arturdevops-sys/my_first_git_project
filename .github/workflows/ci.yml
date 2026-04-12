@@ -18,7 +18,7 @@ jobs:
           python-version: '3.11'
 
       - name: Install dependencies
-        run: pip install flake8
+        run: pip install -r requierements.txt
 
       - name: Run linter
         run: flake8 .
