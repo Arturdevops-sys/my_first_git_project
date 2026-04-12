@@ -3,6 +3,6 @@
 HEAD
 Добавлено в feature-branch
 Добавил строку для теста Git workflow
-Добавлено из feature/learning-git веткизцвlsls
+Добавлено из feature/learning-git
 Практика Git - commit №1
 Тренерую Git
