@@ -8,6 +8,10 @@ jobs:
   test:
     runs-on: ubuntu-latest
 
+    env:
+      DATABASE: localhost
+      PORT: 5432
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
