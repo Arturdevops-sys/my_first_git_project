@@ -4,7 +4,10 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+
+
 class Handler(BaseHTTPRequestHandler):
+
     def do_GET(self):
         db = os.getenv("DATABASE")
         port = os.getenv("PORT")
@@ -15,6 +18,8 @@ class Handler(BaseHTTPRequestHandler):
         self.send_header('Content-type', 'text/plain')
         self.end_headers()
         self.wfile.write(massage.encode())
+
+
 
 server = HTTPServer(("0.0.0.0", 8000), Handler)
 print("Server running on port 8000...")
