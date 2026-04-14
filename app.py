@@ -5,7 +5,6 @@ from dotenv import load_dotenv
 load_dotenv()
 
 
-
 class Handler(BaseHTTPRequestHandler):
 
     def do_GET(self):
@@ -18,7 +17,6 @@ class Handler(BaseHTTPRequestHandler):
         self.send_header('Content-type', 'text/plain')
         self.end_headers()
         self.wfile.write(massage.encode())
-
 
 
 server = HTTPServer(("0.0.0.0", 8000), Handler)
