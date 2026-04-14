@@ -6,19 +6,19 @@ load_dotenv()
 
 
 class Handler(BaseHTTPRequestHandler):
-
     def do_GET(self):
         db = os.getenv("DATABASE")
         port = os.getenv("PORT")
 
-        massage = f"DB: {db}, PORT: {port}, Status: 200"
+        message = f"Database: {db}, Port: {port}, Status: 200"
 
         self.send_response(200)
         self.send_header('Content-type', 'text/plain')
         self.end_headers()
-        self.wfile.write(massage.encode())
+        self.wfile.write(message.encode())
 
 
 server = HTTPServer(("0.0.0.0", 8000), Handler)
+
 print("Server running on port 8000...")
 server.serve_forever()
