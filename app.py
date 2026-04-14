@@ -1,14 +1,21 @@
+from http.server import BaseHTTPRequestHandler, HTTPServer
 import os
 from dotenv import load_dotenv
-import requests
 
 load_dotenv()
 
-db = os.getenv("DATABASE")
-port = os.getenv("PORT")
+class Handler(BaseHTTPRequestHandler):
+    def do_GET(self):
+        db = os.getenv("DATABASE")
+        port = os.getenv("PORT")
 
-print("Database:", db)
-print("Port:", port)
+        massage = f"DB: {db}, PORT: {port}, Status: 200"
 
-response = requests.get("https://api.github.com")
-print("Status:", response.status_code)
+        self.send_response(200)
+        self.send_header('Content-type', 'text/plain')
+        self.end_headers()
+        self.wfile.write(massage.encode())
+
+server = HTTPServer(("0.0.0.0", 8000), Handler)
+print("Server running on port 8000...")
+server.serve_forever()
